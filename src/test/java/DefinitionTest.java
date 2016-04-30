@@ -9,4 +9,10 @@ public class DefinitionTest {
     assertEquals(true, testDefinition instanceof Definition);
   }
 
+  @Test
+  public void definition_instantiatesWithContent_String() {
+    Definition testDefinition = new Definition("a to-live place");
+    assertEquals("a to-live place", testDefinition.getContent());
+  }
+
 }
