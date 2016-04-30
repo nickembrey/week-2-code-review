@@ -41,10 +41,17 @@ public class WordTest {
     assertTrue(Word.all().contains(secondWord));
   }
 
-  @Test public void clear_emptiesAllWordsFromList_0() {
+  @Test
+  public void clear_emptiesAllWordsFromList_0() {
     Word testWord = new Word("Home");
     Word.clear();
     assertEquals(0, Word.all().size());
+  }
+
+  @Test
+  public void getId_wordsInstantiateWithAnId_1() {
+    Word testWord = new Word("Home");
+    assertEquals(1, testWord.getId());
   }
 
 }

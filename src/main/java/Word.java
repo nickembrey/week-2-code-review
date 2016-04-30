@@ -11,8 +11,8 @@ public class Word {
     for(String definition : definitions) {
       mDefinitions.add(new Definition (definition));
     }
-    mId = instances.size();
     instances.add(this);
+    mId = instances.size();
   }
 
   public ArrayList<Definition> getDefinitions() {
