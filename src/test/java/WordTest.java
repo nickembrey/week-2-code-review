@@ -33,4 +33,12 @@ public class WordTest {
     assertEquals(true, Word.all().get(0) instanceof Word);
   }
 
+  @Test
+  public void all_returnsAllInstancesOfWord_true() {
+    Word firstWord = new Word("Home", "a to-live place");
+    Word secondWord = new Word("Work", "a to-toil place");
+    assertTrue(Word.all().contains(firstWord));
+    assertTrue(Word.all().contains(secondWord));
+  }
+
 }
