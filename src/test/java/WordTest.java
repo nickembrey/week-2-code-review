@@ -15,4 +15,10 @@ public class WordTest {
     assertEquals(true, testWord instanceof Word);
   }
 
+  @Test
+  public void word_instantiatesWithOneDefinition_true() {
+    Word testWord = new Word("Home", "a to-live place");
+    assertEquals(true, testWord.getDefinitions().get(0) instanceof Definition);
+  }
+
 }
