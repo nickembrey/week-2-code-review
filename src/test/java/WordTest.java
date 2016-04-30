@@ -54,4 +54,11 @@ public class WordTest {
     assertEquals(1, testWord.getId());
   }
 
+  @Test
+  public void find_returnsWordWithSameId_secondWord() {
+    Word firstWord = new Word("Home", "a to-live place");
+    Word secondWord = new Word("Work", "a to-toil place");
+    assertEquals(secondWord, Word.find(secondWord.getId()));
+  }
+
 }
