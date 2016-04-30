@@ -21,4 +21,10 @@ public class WordTest {
     assertEquals(true, testWord.getDefinitions().get(0) instanceof Definition);
   }
 
+  @Test
+  public void word_instantiatesWithMultipleDefinitions_true() {
+    Word testWord = new Word("Home", "a to-live place", "where the heart is");
+    assertEquals(true, testWord.getDefinitions().get(0) instanceof Definition && testWord.getDefinitions().get(1) instanceof Definition);
+  }
+
 }
