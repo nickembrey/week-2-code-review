@@ -1,10 +1,19 @@
 <h1>$word.getWord()</h1>
 
+<a href="/">All words</a>
+
 <ul>
   #foreach($definition in $word.getDefinitions())
    <li>$definition.getContent()</li>
   #end
 </ul>
 
-<a href="/words/$word.getId()/definitions/new">Add a new definition</a>
-<a href="/">All words</a>
+<form action="/words/$word.getId()" method="post">
+
+  <div class="form-group">
+    <label for="definition">Definition</label>
+    <input id="definition" name="definition" type="text" class="form-control">
+  </div>
+
+  <button type="submit" class="btn btn-success">Add definition</button>
+</form>

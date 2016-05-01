@@ -23,6 +23,10 @@ public class Word {
     return mWord;
   }
 
+  public void addDefinition(Definition definition) {
+    mDefinitions.add(definition);
+  }
+
   public static ArrayList<Word> all() {
     return instances;
   }
