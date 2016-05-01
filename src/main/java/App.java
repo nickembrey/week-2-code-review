@@ -26,5 +26,13 @@ public class App {
       return new ModelAndView(model, "templates/layout.vtl");
     }, new VelocityTemplateEngine());
 
+    get("/words/:id", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("template", "templates/word.vtl");
+      Word word = Word.find(Integer.parseInt(request.params(":id")));
+      model.put("word", word);
+      return new ModelAndView(model, "templates/layout.vtl");
+    }, new VelocityTemplateEngine());
+
   }
 }

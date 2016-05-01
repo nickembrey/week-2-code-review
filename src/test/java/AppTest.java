@@ -29,6 +29,15 @@ public class AppTest extends FluentTest {
     fill("#word").with("Home");
     submit(".btn");
     assertThat(pageSource()).contains("Home");
-}
+  }
+
+  @Test
+  public void categoryShowPageDisplaysName() {
+    goTo("http://localhost:4567/");
+    fill("#word").with("Home");
+    submit(".btn");
+    click("a", withText("Home"));
+    assertThat(pageSource()).contains("Home");
+  }
 
 }
