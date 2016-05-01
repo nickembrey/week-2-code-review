@@ -1,5 +1,14 @@
 <h1>Dictionary!</h1>
 
-<a href="/words/new">Add a New Entry</a>
+<form action="/words" method="post">
+  <input id="word" name="word" type="text">
+  <button type="submit" class="btn btn-success">Add Word</button>
+</form>
+
+<ul>
+  #foreach ($word in $words)
+    <li><a href="/words/$word.getId()">$word.getWord()</a></li>
+  #end
+</ul>
 
 </div>
